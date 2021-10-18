@@ -4,6 +4,7 @@
   --current-background-color: #ffffff;
   --accent-color: #2196f3;
   --accent-text-color: #ffffff;
+  --secondary-bg-color: #f5f4fa;
 }
 
 body {
@@ -31,7 +32,9 @@ body {
 }
 
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.footer-link:hover,
+.footer-link:focus {
   color: var(--accent-color);
 }
 
@@ -72,15 +75,130 @@ body {
 }
 
 /* Кнопки */
-.button {
+.btn {
   cursor: pointer;
   font-family: inherit;
   font-style: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+
+  color: var(--current-title-color);
+  background-color: var(--secondary-bg-color);
+
+  border: 0;
+  border-radius: 4px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--accent-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.btn.hero {
+  color: var(--accent-text-color);
+  background-color: var(--accent-color);
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn.hero:focus,
+.btn.hero:hover {
+  background-color: #188ce8;
+}
+
+/* Заголовки */
+.heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  color: var(--current-title-color);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--current-title-color);
+}
+
+.title-features {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Основной текст */
+
+.text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--current-text-color);
+}
+
+/* Карточки */
+
+.team-cards {
+  background-color: var(--secondary-bg-color);
+}
+
+.cards-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.cards-text {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+/* Footer */
+.footer {
+  background-color: #2f303a;
+}
+
+.footer-text {
   color: var(--accent-text-color);
-  background-color: var(--accent-color);
+  font-style: normal;
+}
+
+.footer-link {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Прячем заголовоки */
+.headen {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
